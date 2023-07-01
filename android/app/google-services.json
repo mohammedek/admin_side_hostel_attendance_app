@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "397277320203",
+    "project_id": "hostel-attendence-wmo",
+    "storage_bucket": "hostel-attendence-wmo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:397277320203:android:b9b30592f7f841eae6e30e",
+        "android_client_info": {
+          "package_name": "com.example.hostel_attendence_wmo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "397277320203-d47425tfhq5kab6bn5b39mk73sksp76a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hostel_attendence_wmo",
+            "certificate_hash": "86232363484dc910f8f55d70f3fd5201cdff41f2"
+          }
+        },
+        {
+          "client_id": "397277320203-93tecfo5r4fimfqev8eabv2hicv2vd9v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNNjjkMwol4muiJytq1gK2J-Qf_3ZmhuY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "397277320203-93tecfo5r4fimfqev8eabv2hicv2vd9v.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "397277320203-t3cf9telcij77su3djukqqd5bal1mia7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.hostelAttendenceWmo"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
