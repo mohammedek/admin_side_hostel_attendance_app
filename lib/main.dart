@@ -1,6 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:hostel_attendence_admin/app/bottom_nav/bottom_navigation.dart';
+import 'package:hostel_attendence_admin/app/screens/login_screen.dart';
+import 'package:hostel_attendence_admin/app/screens/splash_screen.dart';
 
 
 Future <void> main() async {
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyBottomNavigationBar()
+      home:  const SplashScreen()
     );
   }
 }

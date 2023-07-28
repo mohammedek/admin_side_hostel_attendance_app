@@ -6,6 +6,10 @@ extension DateTimeExtension on DateTime {
     return DateFormat.yMMMMEEEEd().format(this);
   }
 
+  String formatDay() {
+    return DateFormat('EEEE').format(this);
+  }
+
   String format([String pattern = 'dd/MM/yyyy', String? locale]) {
     if (locale != null && locale.isNotEmpty) {
       initializeDateFormatting(locale);

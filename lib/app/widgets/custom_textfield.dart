@@ -46,7 +46,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
       child: TextFormField(
         maxLength: widget.maxLenght,
         style: GoogleFonts.inter(
-          textStyle: const TextStyle(color: AppColor.primary_color),
+          textStyle: const TextStyle(color: AppColor.secondary_color),
         ),
         cursorColor: AppColor.accentColor,
         controller: widget.controller,
@@ -59,23 +59,23 @@ class _CustomTextFieldState extends State<CustomTextField> {
             borderSide: BorderSide(color: Colors.red),
           ),
           enabledBorder: const OutlineInputBorder(
-            borderSide: BorderSide(color: AppColor.primary_color),
+            borderSide: BorderSide(color: AppColor.secondary_color),
           ),
           disabledBorder: const OutlineInputBorder(
-            borderSide: BorderSide(color: AppColor.primary_color),
+            borderSide: BorderSide(color: AppColor.secondary_color),
           ),
           focusedBorder: const OutlineInputBorder(
-            borderSide: BorderSide(color: AppColor.primary_color),
+            borderSide: BorderSide(color: AppColor.secondary_color),
           ),
           focusColor: AppColor.primary_color,
           fillColor: AppColor.primary_color,
           hintText: widget.hintText,
           hintStyle: const TextStyle(
-            color: AppColor.primary_color,
+            color: AppColor.secondary_color,
             fontSize: 14,
             fontWeight: FontWeight.w500,
           ),
-          iconColor: AppColor.primary_color,
+          iconColor: const Color.fromARGB(255, 13, 5, 5),
           prefixIcon: widget.icon,
           border: OutlineInputBorder(
             borderSide: const BorderSide(
@@ -88,7 +88,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
             onTap: _toggleVisibility,
             child: Icon(
               _obscureText ? Icons.visibility : Icons.visibility_off,
-              color: AppColor.primary_color,
+              color: AppColor.secondary_color,
             ),
           )
               : null,

@@ -1,44 +1,34 @@
-import 'dart:async';
 
-import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
-import 'package:hostel_attendence_admin/app/all_data_screen/all_data_screen.dart';
 import 'package:hostel_attendence_admin/app/constants.dart';
-
-import '../admin_home/admin_side_home_screen.dart';
+import '../screens/admin_home/admin_side_home_screen.dart';
+import '../screens/all_data_screen/all_data_screen.dart';
+import '../screens/canteen_seating_arrangment/canteen_seating_screen.dart';
 
 class MyBottomNavigationBar extends StatefulWidget {
   const MyBottomNavigationBar({super.key});
   @override
-  _MyBottomNavigationBarState createState() => _MyBottomNavigationBarState();
+  MyBottomNavigationBarState createState() => MyBottomNavigationBarState();
 }
 
 bool _showDialog = false;
 
-class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
+class MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
   int _currentIndex = 1;
-  late StreamSubscription<ConnectivityResult> _connectivitySubscription;
   late List<Widget> _pages;
-  bool _isConnected = false;
 
   @override
   void initState() {
     super.initState();
-    _connectivitySubscription = Connectivity()
-        .onConnectivityChanged
-        .listen((ConnectivityResult result) {
-      setState(() {
-        _isConnected = result != ConnectivityResult.none;
-      });
-    });
   }
 
   @override
   Widget build(BuildContext context) {
-    _pages = const [
-      AdminAllDataScreen(),
-      AdminSideHomeScreen(),
+    _pages =  [
+      const AdminAllDataScreen(),
+      const AdminSideHomeScreen(),
+      const CanteenScreen()
     ];
     return _showDialog
         ? WillPopScope(
@@ -61,25 +51,31 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
           ),
         ),
         child: AnimatedBottomNavigationBar(
+          notchMargin: 20,
+          blurEffect: true,
+          leftCornerRadius: 10,
+          rightCornerRadius: 10,
           splashSpeedInMilliseconds: 200,
           iconSize: 35,
-          backgroundColor: AppColor.secondary_color,
+          // backgroundColor: AppColor.secondary_color,
+          
           icons: const [
-            Icons.calendar_month,
+            Icons.app_registration,
             Icons.home_rounded,
-            Icons.manage_history_rounded,
+            Icons.table_bar_rounded
+            // Icons.manage_history_rounded,
           ],
           activeIndex: _currentIndex,
           gapLocation: GapLocation.none,
           inactiveColor: AppColor.grey,
-          activeColor: AppColor.accentColor,
-          notchSmoothness: NotchSmoothness.softEdge,
-          splashRadius: 2,
+          activeColor: Colors.purple.shade300,
+          notchSmoothness: NotchSmoothness.verySmoothEdge,
+          splashRadius: 6,
           splashColor: AppColor.secondary_color,
           gapWidth: 30,
-          height: 53,
+          height:70,
           // borderWidth: 30,
-          borderColor: AppColor.grey,
+          borderColor: Colors.transparent,
           // leftCornerRadius: 10,
           // rightCornerRadius: 10,
           onTap: (index) {

@@ -42,11 +42,18 @@ dependencies:
   shimmer:
   url_launcher: ^6.1.10
   lottie:
+  eva_icons_flutter:
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+  build_runner:
+  flutter_gen_runner:
+  flutter_launcher_icons: "^0.13.1"
+flutter_launcher_icons:
+  android: "app_logo"
+  ios: true
+  image_path: "assets/icon/app_logo.png"
   flutter_lints: ^2.0.0
 
 # For information on the generic Dart part of this file, see the
@@ -54,10 +61,10 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
+  assets:
+    - assets/
+    - assets/svg/
+    - assets/lottie/
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
